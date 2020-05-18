@@ -1164,7 +1164,7 @@ define("scripts/factory/fruit.js", function (exports) {
 	};
 
 	// TODO: 是否水果全开？
-	var types = ["peach", "sandia", "apple", "banana", "basaha", "basaha"];
+	var types = ["peach", "sandia", "apple", "banana", "basaha", "litchi"];
 	// var types = [ "sandia", "boom" ];
 	var rotateSpeed = [60, 50, 40, -40, -50, -60];
 
