@@ -1159,11 +1159,12 @@ define("scripts/factory/fruit.js", function (exports) {
 		sandia: ["images/fruit/sandia.png", 98, 85, 38, -100, 0, "#c00"],
 		apple: ["images/fruit/apple.png", 66, 66, 31, -54, 0, "#c8e925"],
 		banana: ["images/fruit/banana.png", 126, 50, 43, 90, 0, null],
-		basaha: ["images/fruit/basaha.png", 68, 72, 32, -135, 0, "#c00"]
+		basaha: ["images/fruit/basaha.png", 68, 72, 32, -135, 0, "#c00"],
+		litchi: ["images/fruit/litchi.png", 68, 72, 32, -135, 0, "#c00"]
 	};
 
 	// TODO: 是否水果全开？
-	var types = ["peach", "sandia", "apple", "banana", "basaha"];
+	var types = ["peach", "sandia", "apple", "banana", "basaha", "basaha"];
 	// var types = [ "sandia", "boom" ];
 	var rotateSpeed = [60, 50, 40, -40, -50, -60];
 
@@ -1495,7 +1496,7 @@ define("scripts/factory/fruit.js", function (exports) {
 		if (random(8) == 4)
 			return "boom";
 		else
-			return types[random(5)];
+			return types[random(6)];
 	};
 
 	return exports;
