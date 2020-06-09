@@ -5,7 +5,7 @@ exports.unsetObject = function( object ){
 };
 
 exports.getAngleByRadian = function( radian ){
-	return radian * 180 / Math.PI;
+	return radian * 180 / Math.PI; //Math.PI 返回圆周率（约等于3.14159）。
 }
 
 exports.pointToRadian =	function( origin, point ){
@@ -21,7 +21,7 @@ exports.pointToRadian =	function( origin, point ){
 		return PI;
 	}
 
-	var t = Math.atan( ( origin[1] - point[1] ) / ( origin[0] - point[0] ) );
+	var t = Math.atan( ( origin[1] - point[1] ) / ( origin[0] - point[0] ) ); //Math.atan 以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。
 
 	if( point[0] > origin[0] && point[1] < origin[1] )
 		return t + 2 * PI;

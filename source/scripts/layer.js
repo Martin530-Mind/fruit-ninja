@@ -31,7 +31,7 @@ exports.createText = function( layer, text, x, y, fill, size ){
 		fill: fill || "#fff",
 		"font-size": size || "14px",
 		"font-family": "黑体",
-		"text-anchor": "start"
+            "text-anchor": "start"
 	});
 };
 

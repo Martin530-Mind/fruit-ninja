@@ -15,5 +15,5 @@ exports.clear = function(){
 
 exports.log = function(text){
 	y += 20;
-    texts.push( layer.createText( "default", text, x, y ) );
+    texts.push( layer.createText( "default", text, x, y ) );//push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。
 };

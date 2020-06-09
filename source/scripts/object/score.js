@@ -12,7 +12,7 @@ var message = require( "../message" );
  * 分数模块
  */
 
-var image, text1, text2, animLength = 500;;
+var image, text1, text2, animLength = 500;
 
 var imageSx = -94, imageEx = 6;
 var text1Sx = -59, text1Ex = 41;
@@ -43,11 +43,11 @@ exports.hide = function( start ){
 };
 
 exports.number = function( number ){
-    text1.attr( "text", number || 0 );
-    image.scale( 1.2, 1.2 );
-    setTimeout(function(){
-        image.scale( 1, 1 );
-    }, 60);
+        text1.attr( "text", number || 0 );
+        image.scale( 1.2, 1.2 );
+        setTimeout(function(){
+            image.scale( 1, 1 );
+        }, 60);
     // message.postMessage( number, "score.change" );
 };
 

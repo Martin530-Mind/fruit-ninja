@@ -46,7 +46,7 @@ exports.start = function(){
     boomSnd = sound.create( "sound/boom" );
     timeline.setTimeout(function(){
         state( "game-state" ).set( "playing" );
-        gameInterval = timeline.setInterval( barbette, 1e3 );
+        gameInterval = timeline.setInterval( barbette, 1e-3 );
     }, 500);
 };
 
@@ -69,9 +69,9 @@ exports.gameOver = function(){
 
 exports.applyScore = function( score ){
     if( score > volleyNum * volleyMultipleNumber )
-        volleyNum ++,
+        volleyNum ++;
         volleyMultipleNumber += 50;
-};
+};//游戏难度增加
 
 exports.sliceAt = function( fruit, angle ){
     var index;
@@ -81,8 +81,8 @@ exports.sliceAt = function( fruit, angle ){
 
     if( fruit.type != "boom" ){
         fruit.broken( angle );
-        if( index = fruits.indexOf( fruit ) )
-            fruits.splice( index, 1 );
+        if( index = fruits.indexOf( fruit ) ) //indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+            fruits.splice( index, 1 ); //splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。该方法会改变原始数组。
         score.number( ++ scoreNumber );
         this.applyScore( scoreNumber );
     }else{

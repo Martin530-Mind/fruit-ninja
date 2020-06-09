@@ -28,7 +28,7 @@ var average = function( a, b ){ return ( ( a + b ) / 2 ) >> 0; };
 var dropTime = 1200, dropXScope = 200, shadowPos = 50;
 
 var infos = {
-	// type: [ imageSrc, width, height, radius, fixAngle, isReverse, juiceColor ]
+	// type: [ imageSrc, width, height, radius, fixAngle, isReverse, juiceColor ] fixAngle固定 isReverse使反转
 	boom: [ "images/fruit/boom.png", 66, 68, 26, 0, 0, null ],
 	peach: [ "images/fruit/peach.png", 62, 59, 37, -50, 0, "#e6c731" ],
 	sandia: [ "images/fruit/sandia.png", 98, 85, 38, -100, 0, "#c00" ],

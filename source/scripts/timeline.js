@@ -87,7 +87,7 @@ ClassTimer.prototype.taskList = function( queue, task ){
 			while( i -- )
 				task = this[i],
 				task.stop(),
-				this.splice( i, 1 );
+				this.splice( i, 1 );//splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
 			return this;
 		};
 
@@ -129,7 +129,7 @@ ClassTimer.prototype.setInterval = function( fn, time ){
 ClassTimer.prototype.getFPS = function(){
 	var t = now(), c = this.count, fps = c / ( t - this.startTime ) * 1e3;
 	if( c > 1e3 )
-		this.count = 0,
+		this.count = 0;
 		this.startTime = t;
 	return fps;
 };
@@ -195,7 +195,7 @@ timeline.use = function( name ){
  */
 
 var now = function(){
-	return new Date().getTime();
+	return new Date().getTime();//返回 1970 年 1 月 1 日至今的毫秒数。
 };
 
 var createTask = function( conf ){

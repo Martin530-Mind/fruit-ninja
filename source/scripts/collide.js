@@ -12,7 +12,7 @@ exports.check = function( knife ){
 
 	fruits.forEach(function( fruit ){
 	    var ck = lineInEllipse(
-	    	knife.slice( 0, 2 ), 
+	    	knife.slice( 0, 2 ), //slice() 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。
 	    	knife.slice( 2, 4 ), 
 	    	[ fruit.originX, fruit.originY ],
 	    	fruit.radius
@@ -43,7 +43,7 @@ function equation12( a, b, c ){
 
 // 返回线段和椭圆的两个交点，如果不相交，返回 null
 function lineXEllipse( p1, p2, c, r, e ){
-	// 线段：p1, p2    圆心：c    半径：r    离心率：e
+	// 线段：p1, p2    圆心：c    半径：r    离心率：e 椭圆：0<e<1
 	if (r <= 0) return;
 	e = e === undefined ? 1 : e;
 	var t1 = r, t2 = r * e, k;

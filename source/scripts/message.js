@@ -16,7 +16,7 @@ exports.postMessage = function( message/*, message, message... */, to ){
 		splitIndex = messages.length - 1;
 
 	to = messages[ splitIndex ];
-	messages.slice( 0, splitIndex );
+	messages.slice( 0, splitIndex ); //slice() 方法可从已有的数组中返回选定的元素。
 
 	Ucren.dispatch( to, messages );
 };
