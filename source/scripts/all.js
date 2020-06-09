@@ -229,7 +229,7 @@ define("scripts/game.js", function (exports) {
 
     var snd;
     var valuesSnd;
-    var values = [ "duty","law","living" ];
+    var values = [ "unity1","unity2","unity3","duty","law","living" ];
     // fruit barbette
     var barbette = function () {
         if (fruits.length >= volleyNum)
@@ -1215,18 +1215,21 @@ define("scripts/factory/fruit.js", function (exports) {
         duty: ["images/fruit/duty.png", 66, 68, 26, 0, 0, null],
         law: ["images/fruit/law.png", 66, 68, 26, 0, 0, null],
         living: ["images/fruit/living.png", 66, 68, 26, 0, 0, null],
+        unity1: ["images/fruit/unity1.png", 66, 68, 26, 0, 0, null],
+        unity2: ["images/fruit/unity2.png", 66, 68, 26, 0, 0, null],
+        unity3: ["images/fruit/unity3.png", 66, 68, 26, 0, 0, null],
         // boom: ["images/fruit/boom.png", 66, 68, 26, 0, 0, null],
-        peach: ["images/fruit/peach.png", 62, 59, 37, -50, 0, "#e6c731"],
-        sandia: ["images/fruit/sandia.png", 98, 85, 38, -100, 0, "#c00"],
-        apple: ["images/fruit/apple.png", 66, 66, 31, -54, 0, "#c8e925"],
-        banana: ["images/fruit/banana.png", 126, 50, 43, 90, 0, null],
-        basaha: ["images/fruit/basaha.png", 68, 72, 32, -135, 0, "#c00"],
-        litchi: ["images/fruit/litchi.png", 68, 72, 32, -135, 0, "#c00"]
+        disunity1: ["images/fruit/disunity1.png", 66, 68, 37, -50, 0, "#e6c731"],
+        disunity2: ["images/fruit/disunity2.png", 66, 68, 38, -100, 0, "#c00"],
+        disunity3: ["images/fruit/disunity3.png", 66, 68, 31, -54, 0, "#c8e925"]
+        //banana: ["images/fruit/banana.png", 126, 50, 43, 90, 0, null],
+       // basaha: ["images/fruit/basaha.png", 68, 72, 32, -135, 0, "#c00"],
+        //litchi: ["images/fruit/litchi.png", 68, 72, 32, -135, 0, "#c00"]
     };
 
     // TODO: 是否水果全开？
-    var types = ["peach", "sandia", "apple", "banana", "basaha", "litchi"];//,"duty","law","living"
-    var values = [ "duty","law","living" ];
+    var types = ["disunity1", "disunity2", "disunity3"];//,"duty","law","living"
+    var values = [ "unity1","unity2","unity3","duty","law","living" ];
     var rotateSpeed = [60, 50, 40, -40, -50, -60];
 
     var fruitCache = [];
@@ -1557,10 +1560,10 @@ define("scripts/factory/fruit.js", function (exports) {
     };
 
     function getType() {
-        if (random(8) == 4)
+        if (random(6) == 3)
             return values[random(4)];
         else
-            return types[random(6)];
+            return types[random(9)];
     };
 
     return exports;
